@@ -1,0 +1,5 @@
+cd build
+cmake ..
+cmake --build . --config Release
+
+.\Release\Figures4.exe
