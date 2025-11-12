@@ -67,7 +67,6 @@ void demoConcreteFigures() {
 template<typename T>
 void demoSharedPtrFigures() {
     std::cout << "\nДемонстрация Array<std::shared_ptr<Figure<T>>>" << std::endl;
-    
     Array<std::shared_ptr<Figure<T>>> figures;
     
     figures.push_back(std::make_shared<Rhombus<T>>(0.0, 0.0, 2.0, 1.0, 4.0, 0.0, 2.0, -1.0));
@@ -155,13 +154,11 @@ int main() {
                 }
                 break;
             }
-            
             case 2: {
                 if (figure_array.empty()) {
                     std::cout << "error: массив пуст!" << std::endl;
                     break;
                 }
-                
                 std::cout << "Bведите индекс для удаления (1-" << figure_array.size() << "): ";
                 size_t index;
                 std::cin >> index;
@@ -174,7 +171,6 @@ int main() {
                 }
                 break;
             }
-            
             case 3: {
                 if (figure_array.empty()) {
                     std::cout << "error: массив пуст" << std::endl;
@@ -189,7 +185,6 @@ int main() {
                 }
                 break;
             }
-            
             case 4: {
                 double total_area = 0;
                 for (size_t i = 0; i < figure_array.size(); ++i) {
@@ -198,7 +193,6 @@ int main() {
                 std::cout << "Общая площадь всех фигур: " << total_area << std::endl;
                 break;
             }
-            
             case 5: {
                 demoFigurePointers<double>();
                 demoConcreteFigures();
@@ -206,15 +200,12 @@ int main() {
                 demoMoveSemantics();
                 break;
             }
-            
             case 6:
                 std::cout << "Программа завершена" << std::endl;
                 return 0;
-            
             default:
                 std::cout << "error: неверный выбор" << std::endl;
         }
     }
-    
     return 0;
 }

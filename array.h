@@ -45,7 +45,6 @@ public:
         _size = other._size;
         _capacity = other._capacity;
         _array = std::move(other._array);
-
         other._size = 0;
         other._capacity = 0;
     }

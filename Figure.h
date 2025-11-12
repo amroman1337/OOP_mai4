@@ -40,7 +40,6 @@ public:
         T center_y = (p1.y() + p2.y() + p3.y() + p4.y()) / 4;
         return Point<T>(center_x, center_y);
     }
-
     double getArea() const override {
         T d1 = std::sqrt(std::pow(p2.x() - p4.x(), 2) + std::pow(p2.y() - p4.y(), 2));
         T d2 = std::sqrt(std::pow(p1.x() - p3.x(), 2) + std::pow(p1.y() - p3.y(), 2));
@@ -48,7 +47,7 @@ public:
     }
 
     void printVertices(std::ostream& output) const override {
-        output << "Вершины ромба:\n";
+        output << "Вершины ромба: \n";
         output << "1: (" << p1.x() << ", " << p1.y() << ")\n";
         output << "2: (" << p2.x() << ", " << p2.y() << ")\n";
         output << "3: (" << p3.x() << ", " << p3.y() << ")\n";
